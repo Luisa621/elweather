@@ -1,0 +1,16 @@
+<ng-container>
+
+
+
+  <ng-container *ngIf="geoBlocked">
+    <h3>Unable to get your location!</h3>
+    <input type="text" placeholder="zip code" (blur)="getByZipCode($event.target.value)" />
+  </ng-container>
+
+  <div style="width: 100%; height: 75px; border: solid red 1px;" *ngFor="let location of locations">
+    {{location.name}}
+  </div>
+
+
+
+</ng-container>
